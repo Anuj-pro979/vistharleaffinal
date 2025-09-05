@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Resources - Vistarleaf</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    :root { --brand-green: #999900; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; }
+    .navbar { background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .navbar-brand { font-weight: bold; color: var(--brand-green) !important; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white; padding: 140px 0; position: relative;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .section-title { color: var(--brand-green); font-weight: bold; margin-bottom: 20px; text-transform: uppercase; }
+    .blog-card {
+      background: #fff; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: 0.3s;
+    }
+    .blog-card:hover { transform: translateY(-6px); }
+    .blog-card img { height: 200px; object-fit: cover; width: 100%; transition: 0.4s; }
+    .blog-card:hover img { transform: scale(1.08); }
+    .blog-content { padding: 20px; }
+    .tag { background: var(--brand-green); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; }
+    .newsletter {
+      background: linear-gradient(to right, #f5f5f5, #fafafa);
+      padding: 60px 20px; border-radius: 15px; text-align: center;
+    }
+    .newsletter img { max-width: 200px; margin-bottom: 15px; }
+    footer { background: #222; color: #bbb; padding: 40px 0; }
+    footer a { color: #bbb; text-decoration: none; }
+    footer a:hover { color: white; }
+    .fade-in { animation: fadeIn 0.5s ease-in; }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top" style="background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="VL_Logo_No_BG.png" alt="Vistarleaf Logo" style="height:49px; vertical-align:middle;">
+<span style="color:#999900; font-weight:bold; font-size:20px; vertical-align:middle; margin-left:8px;">
+  Vistarleaf
+</span>
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery-media.html">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center text-white">
+  <div class="container hero-content">
+    <h1 class="display-4 fw-bold">Knowledge Hub</h1>
+    <p class="lead">Explore insights on sustainability, eco-dining, and innovation</p>
+  </div>
+</section>
+
+<!-- FEATURED POST -->
+<div class="container my-5" data-aos="fade-up">
+  <h2 class="section-title text-center">Featured</h2>
+  <div class="blog-card d-flex flex-md-row">
+    <img src="https://source.unsplash.com/700x400/?eco,innovation" class="w-50 d-none d-md-block" alt="Featured">
+    <div class="blog-content">
+      <span class="tag">Innovation</span><span class="tag">Community</span>
+      <h3 class="mt-2">Empowering Rural Communities with Eco Innovation</h3>
+      <p class="small text-muted">April 5, 2025 • 5 min read</p>
+      <p>Learn how Vistarleaf is bridging tradition and technology to create sustainable jobs and reduce plastic use globally.</p>
+      <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#blogModal">Read More</button>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH & FILTER -->
+<div class="container my-5" data-aos="fade-up">
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search articles...">
+    </div>
+    <div class="col-md-6 text-md-end mt-3 mt-md-0">
+      <button class="btn btn-outline-success filter-btn" data-category="all">All</button>
+      <button class="btn btn-outline-success filter-btn" data-category="sustainability">Sustainability</button>
+      <button class="btn btn-outline-success filter-btn" data-category="policy">Policy</button>
+      <button class="btn btn-outline-success filter-btn" data-category="innovation">Innovation</button>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG GRID -->
+<div class="container mb-5">
+  <div class="row g-4" id="blogList">
+    <div class="col-md-4 blog-item" data-category="sustainability">
+      <div class="blog-card">
+        <img src="https://source.unsplash.com/600x400/?forest,eco" alt="Blog">
+        <div class="blog-content">
+          <span class="tag">Sustainability</span>
+          <h5 class="mt-2">Why Leaf Plates are the Future of Dining</h5>
+          <p class="small text-muted">March 5, 2025</p>
+          <p>Discover how natural leaf plates help replace single-use plastics and reduce waste globally.</p>
+          <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#blogModal">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 blog-item" data-category="policy">
+      <div class="blog-card">
+        <img src="https://source.unsplash.com/600x400/?law,policy" alt="Blog">
+        <div class="blog-content">
+          <span class="tag">Policy</span>
+          <h5 class="mt-2">India’s Plastic Ban & Its Opportunities</h5>
+          <p class="small text-muted">Feb 22, 2025</p>
+          <p>Understand India’s SUP ban and how eco-businesses like Vistarleaf align with national goals.</p>
+          <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#blogModal">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 blog-item" data-category="innovation">
+      <div class="blog-card">
+        <img src="https://source.unsplash.com/600x400/?innovation,eco" alt="Blog">
+        <div class="blog-content">
+          <span class="tag">Innovation</span><span class="tag">Tech</span>
+          <h5 class="mt-2">Technology Behind Compostable Tableware</h5>
+          <p class="small text-muted">Jan 30, 2025</p>
+          <p>Learn how indigenous knowledge and modern engineering combine to produce eco-tableware.</p>
+          <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#blogModal">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="container newsletter my-5" data-aos="fade-up">
+  <img src="https://cdn-icons-png.flaticon.com/512/4207/4207242.png" alt="Newsletter">
+  <h2>Join Our Newsletter</h2>
+  <p>Stay updated on eco-living tips, product launches, and sustainability news.</p>
+  <form class="row g-2 justify-content-center" onsubmit="return validateEmail(event)">
+    <div class="col-md-6">
+      <input type="email" id="emailInput" class="form-control" placeholder="Enter your email" required>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-success w-100">Subscribe</button>
+    </div>
+  </form>
+  <p id="newsletterMsg" class="mt-2"></p>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:#1c1c1c; color:#bbb; padding:50px 20px; margin-top:40px; font-family:Arial, sans-serif;">
+  <div style="max-width:1200px; margin:auto;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+      
+      <!-- Company Info -->
+      <div style="flex:1 1 250px; min-width:250px;">
+        <h5 style="color:#fff; margin-bottom:15px; font-size:20px;">Vistarleaf</h5>
+        <p style="line-height:1.6; margin:0;">Eco Sustainable Dining Tableware made from natural leaves.<br>
+        <span style="color:#fff;">Proudly Made in India.</span></p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div style="flex:1 1 150px; min-width:150px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Quick Links</h6>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="about.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">About Us</a></li>
+          <li><a href="business.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Business</a></li>
+          <li><a href="sustainability.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Sustainability</a></li>
+          <li><a href="faq.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">FAQ</a></li>
+          <li><a href="gallery.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Gallery</a></li>
+          <li><a href="blog.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Blog</a></li>
+          <li><a href="legal.html#privacy" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Legal</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div style="flex:1 1 200px; min-width:200px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Contact</h6>
+        <p style="margin:5px 0;">📧 <a href="mailto:support@vistarleaf.com" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">support@vistarleaf.com</a></p>
+        <p style="margin:5px 0;">📞 +91 90 327 500 17</p>
+        <p style="margin:5px 0;">📍 Khammam, Telangana, India</p>
+      </div>
+      
+      <!-- Social -->
+      <div style="flex:1 1 200px; min-width:200px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Follow Us</h6>
+        <div style="display:flex; gap:15px; font-size:20px;">
+          <a href="https://instagram.com/vistarleaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#bbb'"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='#bbb'"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/company/vistar-leaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='#bbb'"><i class="bi bi-linkedin"></i></a>
+          <a href="https://youtube.com/@vistarleaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#bbb'"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <hr style="border:none; border-top:1px solid #444; margin:30px 0;">
+    <p style="text-align:center; margin:0; color:#888;">&copy; 2025 <span style="color:#fff;">Vistarleaf</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- BLOG MODAL -->
+<div class="modal fade" id="blogModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <h3>Sample Blog Post Title</h3>
+      <p class="text-muted">Published on April 5, 2025 • 5 min read</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vistarleaf innovations are helping the planet by reducing plastic waste while empowering communities. This is a placeholder preview for what a full blog post will look like.</p>
+      <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const blogItems = document.querySelectorAll(".blog-item");
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const category = btn.dataset.category;
+      blogItems.forEach(item => {
+        item.classList.remove("fade-in");
+        if (category === "all" || item.dataset.category === category) {
+          item.style.display = "block";
+          item.classList.add("fade-in");
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+
+  document.getElementById("searchInput").addEventListener("keyup", function() {
+    const value = this.value.toLowerCase();
+    blogItems.forEach(item => {
+      const text = item.innerText.toLowerCase();
+      item.style.display = text.includes(value) ? "block" : "none";
+    });
+  });
+
+  function validateEmail(e) {
+    e.preventDefault();
+    const email = document.getElementById("emailInput").value;
+    const msg = document.getElementById("newsletterMsg");
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.innerHTML = "<span class='text-success'>✅ Thanks for subscribing!</span>";
+    } else {
+      msg.innerHTML = "<span class='text-danger'>❌ Please enter a valid email.</span>";
+    }
+  }
+</script>
+</body>
+</html>

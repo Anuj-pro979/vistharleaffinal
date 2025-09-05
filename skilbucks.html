@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillBucks — Digital Marketing Mastery 2025</title>
+  <meta name="description" content="SkillBucks: Live webinar & masterclass — analytics, automation, and growth systems for marketers." />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#ffffff; --muted:#94a3b8;
+      --accent:#3b82f6; --accent-2:#06b6d4; --glass: rgba(255,255,255,0.06);
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Inter',system-ui,Arial; margin:0; background:#f6f8fb; color:#0f1724; -webkit-font-smoothing:antialiased}
+    a{color:var(--accent)}
+    /* NAV */
+    .navbar{background:#fff;border-bottom:1px solid #e6eef9}
+    .navbar-brand{font-weight:800}
+    .nav-cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:.5rem 1rem;border-radius:8px}
+    /* HERO */
+    .hero {
+      position:relative;
+      padding:110px 0 60px;
+      background: linear-gradient(180deg, rgba(6,9,23,0.02), rgba(6,9,23,0.02));
+      overflow:hidden;
+    }
+    .hero__bg{
+      position:absolute; inset:0; background-position:center center; background-size:cover;
+      filter:contrast(.95) saturate(.95) brightness(.85);
+      transform: scale(1.03);
+      z-index:0;
+    }
+    .hero__overlay{
+      position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,10,20,0.25), rgba(255,255,255,0.02)); z-index:1;
+    }
+    .hero__card{
+      position:relative; z-index:2;
+      background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.84));
+      border-radius:14px; padding:28px; box-shadow: 0 12px 40px rgba(2,6,23,0.08);
+      border: 1px solid rgba(12,18,33,0.04);
+    }
+    .hero__title{font-size:2rem;font-weight:800;color:#071130;margin-bottom:.4rem}
+    @media(min-width:992px){ .hero__title{font-size:2.8rem} }
+    .badge-soft{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .7rem;border-radius:999px;background:rgba(59,130,246,0.08);color:var(--accent);font-weight:700}
+    /* Feature cards */
+    .feature-thumb{height:120px;border-radius:10px;object-fit:cover;width:100%}
+    .feature-card{border-radius:12px;padding:18px;border:1px solid #e9f0fb;background:#fff;height:100%}
+    .feature-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(15,20,36,0.06);transition:all .22s}
+    /* Pricing */
+    .pricing-card{border-radius:14px;padding:28px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(14,22,40,0.04)}
+    .price-tag{font-size:2.2rem;font-weight:800;color:var(--accent)}
+    /* Speaker */
+    .speaker-avatar{width:110px;height:110px;border-radius:12px;object-fit:cover;border-radius:12px}
+    /* Testimonials */
+    .testimonial{border-radius:12px;padding:18px;border:1px solid #eef6ff;background:linear-gradient(180deg,#fff,#fbfdff)}
+    /* Footer */
+    footer{background:#071130;color:#fff;padding:48px 0;margin-top:40px}
+    /* Sticky CTA */
+    .sticky-register{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:.65rem 1rem;border-radius:999px;box-shadow:0 16px 40px rgba(11,36,132,0.18);z-index:1500;display:flex;gap:.6rem;align-items:center}
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .kicker{font-weight:700;color:#0b1324;font-size:.95rem}
+    /* subtle svg wave */
+    .wave{opacity:.12}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Skill<span style="color:var(--accent)">Bucks</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#speaker">Instructor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item ms-3"><a class="nav-cta nav-link" href="#pricing">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <!-- background image pulled via Unsplash search query (placeholder) -->
+    <div class="hero__bg" style="background-image:url('https://source.unsplash.com/1600x900/?webinar,digital-marketing');"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="hero__card">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge-soft"><i class="fas fa-video"></i> Live Webinar • Aug 30, 2025</span>
+              <span class="ms-3 muted small">Seats running out</span>
+            </div>
+
+            <h1 class="hero__title">Roadmap to Meta Ads Income — Become an Ads Expert & Earn</h1>
+            <p class="muted mb-3">Advanced, hands-on workshop for marketers who want scalable paid growth systems that actually drive ROI. Live Q&A, templates, and certificate.</p>
+
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary" href="#pricing"><i class="fas fa-ticket-alt me-2"></i> Reserve Seat — $47</a>
+              <a class="btn btn-outline-secondary" href="#features"><i class="fas fa-info-circle me-2"></i> Curriculum</a>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-4 text-center">
+                <div class="kicker">Duration</div>
+                <div class="h5">90 min</div>
+              </div>
+              <div class="col-4 text-center">
+                <div class="kicker">Format</div>
+                <div class="h5">Live</div>
+              </div>
+              <div class="col-4 text-center">
+                <div class="kicker">Level</div>
+                <div class="h5">Advanced</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual / speaker panel -->
+        <div class="col-lg-5 text-center">
+          <div class="pricing-card">
+            <!-- illustrative image: replace with your final poster -->
+            <img src="https://source.unsplash.com/800x600/?marketing,team" alt="webinar poster" style="width:100%;border-radius:10px;object-fit:cover" loading="lazy">
+            <div class="text-start mt-3">
+              <strong>Includes</strong>
+              <ul class="mt-2 mb-0 muted">
+                <li>Templates & media kit</li>
+                <li>Actionable frameworks</li>
+                <li>Certificate & recording</li>
+              </ul>
+              <div class="mt-3 d-flex justify-content-between align-items-center">
+                <a href="#pricing" class="btn btn-sm btn-primary">Register Now</a>
+                <small class="muted">Limited seats</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </header>
+
+  <!-- FEATURE GRID -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <div class="kicker">Curriculum</div>
+        <h2 style="font-weight:800">What you'll master in this session</h2>
+        <p class="muted">Practical modules built for growth, testing and scaling ad funnels for real revenue.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- card 1 -->
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img class="feature-thumb mb-3" src="https://source.unsplash.com/800x600/?analytics,dashboard" alt="analytics" loading="lazy">
+            <h5>Performance Analytics</h5>
+            <p class="muted small">Attribution, A/B testing and dashboarding to measure impact and scale winning creatives.</p>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img class="feature-thumb mb-3" src="https://source.unsplash.com/800x600/?ads,facebook" alt="ads" loading="lazy">
+            <h5>Paid Media + Creative</h5>
+            <p class="muted small">Build scalable Meta (Facebook & IG) campaigns that maximize ROI and reduce CPA.</p>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img class="feature-thumb mb-3" src="https://source.unsplash.com/800x600/?automation,workflow" alt="automation" loading="lazy">
+            <h5>Marketing Automation</h5>
+            <p class="muted small">Automate lead nurture and build repeatable funnels for predictable revenue.</p>
+          </div>
+        </div>
+
+        <!-- more -->
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img class="feature-thumb mb-3" src="https://source.unsplash.com/800x600/?mobile,ux" alt="mobile" loading="lazy">
+            <h5>Mobile-first & Conversion</h5>
+            <p class="muted small">Design funnels focused on mobile conversion and micro-optimizations for higher LTV.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img class="feature-thumb mb-3" src="https://source.unsplash.com/800x600/?strategy,planning" alt="strategy" loading="lazy">
+            <h5>Multi-Channel Strategy</h5>
+            <p class="muted small">Integrate organic + paid channels with a coherent acquisition strategy.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img class="feature-thumb mb-3" src="https://source.unsplash.com/800x600/?psychology,behavior" alt="psychology" loading="lazy">
+            <h5>Customer Psychology</h5>
+            <p class="muted small">Behavioral frameworks to increase conversion and retention.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="py-4 bg-white border-top">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-sm-3 py-3">
+          <div class="kicker">Professionals</div>
+          <div class="h4" data-count="12000">12,000+</div>
+        </div>
+        <div class="col-sm-3 py-3">
+          <div class="kicker">Success rate</div>
+          <div class="h4">94%</div>
+        </div>
+        <div class="col-sm-3 py-3">
+          <div class="kicker">Clients</div>
+          <div class="h4">250+</div>
+        </div>
+        <div class="col-sm-3 py-3">
+          <div class="kicker">Years</div>
+          <div class="h4">8</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKER + TESTIMONIALS -->
+  <section id="speaker" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5">
+          <div class="p-4" style="background:linear-gradient(180deg,#fff,#fbfdff);border-radius:12px;border:1px solid rgba(14,22,40,0.04)">
+            <img class="speaker-avatar mb-3" src="https://source.unsplash.com/400x400/?portrait,person" alt="Instructor" loading="lazy">
+            <h4 style="font-weight:800">Aden Jos</h4>
+            <p class="muted small">Performance Marketing Lead — built growth systems for enterprise teams and startups</p>
+            <a class="btn btn-outline-primary btn-sm" href="#pricing">Book a seat</a>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="testimonial p-3">
+                  <p>"Practical, high-impact frameworks — we doubled leads in 60 days."</p>
+                  <div class="small muted">— R. Sharma, Head of Growth</div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="testimonial p-3">
+                  <p>"Best webinar I've attended for paid media — templates were instantly usable."</p>
+                  <div class="small muted">— N. Verma, Founder</div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h3 style="font-weight:800">Choose your plan</h3>
+        <p class="muted">All plans include recording, slides & certificate.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="pricing-card text-center">
+            <div class="mb-2 muted">Standard</div>
+            <div class="price-tag">$47</div>
+            <div class="muted small">Live webinar + recording</div>
+            <ul class="text-start mt-3 muted small">
+              <li>90 min session</li>
+              <li>Q&A</li>
+              <li>Certificate</li>
+            </ul>
+            <a href="#" class="btn btn-primary mt-3 register-btn">Register</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="pricing-card text-center border-primary" style="border:2px solid rgba(59,130,246,0.12)">
+            <div class="mb-2 text-primary">Pro</div>
+            <div class="price-tag">$97</div>
+            <div class="muted small">Includes 1:1 review</div>
+            <ul class="text-start mt-3 muted small">
+              <li>Everything in Standard</li>
+              <li>1:1 funnel review</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#" class="btn btn-primary mt-3 register-btn">Register</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="pricing-card text-center">
+            <div class="mb-2 muted">Team</div>
+            <div class="price-tag">$297</div>
+            <div class="muted small">Team seat bundle</div>
+            <ul class="text-start mt-3 muted small">
+              <li>5 seats</li>
+              <li>Team Q&A</li>
+              <li>Recording & resources</li>
+            </ul>
+            <a href="#" class="btn btn-primary mt-3 register-btn">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-4">
+    <div class="container">
+      <div class="text-center mb-3"><h4 style="font-weight:700">FAQ</h4></div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-md-8">
+          <div class="accordion" id="faq">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">Will I get a certificate?</button></h2>
+              <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body muted">Yes — attendees receive a professional certificate and recording.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">Refund policy?</button></h2>
+              <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body muted">Full refund within 7 days if you are unsatisfied (terms apply).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-6">
+          <h5 style="font-weight:800">SkillBucks</h5>
+          <p class="muted small">A platform for digital marketers — live webinars & skill-based courses.</p>
+        </div>
+        <div class="col-md-3">
+          <h6>Company</h6>
+          <a class="d-block muted small" href="#">About</a>
+          <a class="d-block muted small" href="#">Contact</a>
+        </div>
+        <div class="col-md-3">
+          <h6>Follow</h6>
+          <div class="d-flex gap-2">
+            <a class="btn btn-sm btn-light" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-sm btn-light" href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center muted small mt-4">© <span id="year"></span> SkillBucks • Designed for marketers</div>
+    </div>
+  </footer>
+
+  <!-- Sticky Register CTA -->
+  <a href="#pricing" class="sticky-register d-none d-md-flex" id="stickyRegister">
+    <i class="fas fa-ticket-alt"></i><span>Register</span>
+  </a>
+
+  <!-- Registration Modal (opens to Google Form / checkout) -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-4">
+          <h5 style="font-weight:800">Complete registration</h5>
+          <p class="muted small">You will be taken to the secure registration page.</p>
+          <div class="d-grid">
+            <a id="checkoutLink" href="#" class="btn btn-primary">Proceed to register</a>
+            <button class="btn btn-outline-secondary mt-2" data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // --- Customize: set your registration link here (Google Form / Payment page) ---
+    const registrationLink = 'https://docs.google.com/forms/d/e/YOURFORM';
+
+    // Set year, register links
+    document.getElementById('year').innerText = new Date().getFullYear();
+    document.querySelectorAll('.register-btn, #checkoutLink').forEach(el=>{
+      el.addEventListener('click', (e)=>{
+        // open registration in new tab
+        window.open(registrationLink, '_blank');
+      });
+    });
+
+    // Sticky CTA show/hide
+    const sticky = document.getElementById('stickyRegister');
+    window.addEventListener('scroll', ()=>{
+      if (window.scrollY > 240) sticky.classList.remove('d-none'); else sticky.classList.add('d-none');
+    }, {passive:true});
+
+    // Small animation for numbers (progressive)
+    document.querySelectorAll('[data-count]').forEach(el=>{
+      const end = +el.dataset.count;
+      let curr = 0; const dur = 1400;
+      const start = performance.now();
+      function frame(t){
+        const p = Math.min(1,(t-start)/dur);
+        el.textContent = Math.floor(p*end).toLocaleString();
+        if (p<1) requestAnimationFrame(frame);
+        else el.textContent = end.toLocaleString();
+      }
+      requestAnimationFrame(frame);
+    });
+
+    // Accessibility: keyboard focus for modal
+    document.addEventListener('keydown', (e)=> {
+      if (e.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal.show');
+        modals.forEach(m => bootstrap.Modal.getInstance(m)?.hide());
+      }
+    });
+  </script>
+</body>
+</html>

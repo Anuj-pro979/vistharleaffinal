@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vistarleaf - Eco-sustainable dining tableware made from natural leaves, advancing UN SDGs through rural empowerment and biodiversity protection">
+  <meta name="keywords" content="eco-friendly tableware, sustainable dining, leaf plates, biodegradable plates, UN SDGs, rural empowerment">
+  <meta property="og:title" content="Vistarleaf - Eco Sustainable Dining Tableware">
+  <meta property="og:description" content="Natural leaves to tableware by creating dignified rural jobs and protecting biodiversity through a circular economy.">
+  <meta property="og:image" content="VL_Logo_No_BG.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Vistarleaf - Eco Sustainable Dining Tableware</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="icon" type="image/png" href="VL_Logo_No_BG.png">
+
+  <style>
+    :root { 
+      --brand-green: #999900;
+      --transition-speed: 0.3s;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body { 
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
+    .hero { 
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), 
+                url('https://as1.ftcdn.net/v2/jpg/04/39/02/46/1000_F_439024603_pHjWAZrHOojIFLykqoG5YBv65zcomlMS.jpg') center/cover no-repeat;
+      color: white;
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: linear-gradient(transparent, rgba(255,255,255,0.1));
+    }
+    
+    .section-title { 
+      color: var(--brand-green);
+      font-weight: 700;
+      margin-bottom: 25px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--brand-green);
+      transition: width var(--transition-speed);
+    }
+    
+    .section-title:hover::after {
+      width: 100%;
+    }
+    
+    .btn-brand { 
+      background: var(--brand-green);
+      color: #fff;
+      font-weight: 600;
+      transition: all var(--transition-speed);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-brand:hover { 
+      background: #777700;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(153,153,0,0.2);
+    }
+    
+    .feature-icon { 
+      font-size: 2rem;
+      color: var(--brand-green);
+      margin-bottom: 12px;
+      transition: transform var(--transition-speed);
+    }
+    
+    .feature-icon:hover {
+      transform: scale(1.1);
+    }
+    
+    .impact-card { 
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 25px;
+      transition: all var(--transition-speed);
+      border: 1px solid transparent;
+    }
+    
+    .impact-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--brand-green);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .impact-card h3 { 
+      color: var(--brand-green);
+      font-weight: 700;
+    }
+    
+    .testimonial { 
+      font-style: italic;
+      position: relative;
+      padding: 20px;
+    }
+    
+    .testimonial::before,
+    .testimonial::after {
+      content: '"';
+      font-size: 48px;
+      color: var(--brand-green);
+      opacity: 0.2;
+      position: absolute;
+    }
+    
+    .testimonial::before {
+      top: 0;
+      left: 0;
+    }
+    
+    .testimonial::after {
+      bottom: -20px;
+      right: 0;
+    }
+    
+    .award-logo { 
+      max-height: 60px;
+      margin: 15px;
+      transition: all var(--transition-speed);
+      filter: grayscale(100%);
+    }
+    
+    .award-logo:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+    
+    .sdg-card {
+      transition: all var(--transition-speed);
+      cursor: pointer;
+    }
+    
+    .sdg-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .sdg-icon {
+      transition: transform var(--transition-speed);
+    }
+    
+    .sdg-card:hover .sdg-icon {
+      transform: scale(1.1);
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        padding: 80px 0;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .impact-card {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top" style="background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="VL_Logo_No_BG.png" alt="Vistarleaf Logo" style="height:49px; vertical-align:middle;">
+<span style="color:#999900; font-weight:bold; font-size:20px; vertical-align:middle; margin-left:8px;">
+  Vistarleaf
+</span>
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery-media.html">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- HERO -->
+<header class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 text-lg-start text-center">
+        <h1 class="display-4 mb-4">Vistar Leaf: Advancing Five UN SDGs</h1>
+        <p class="lead mb-4">Natural leaves to tableware by creating dignified rural jobs and protecting biodiversity through a circular economy.</p>
+        <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+          <a href="shop.html" class="btn btn-lg btn-light text-success shadow-sm px-4">
+            <i class="fa-solid fa-shopping-cart me-2"></i>Shop Now
+          </a>
+          <button class="btn btn-outline-light btn-lg px-4" data-bs-toggle="modal" data-bs-target="#partnerModal">
+            <i class="fa-solid fa-handshake me-2"></i>Partner With Us
+          </button>
+        </div>
+        <p class="mt-4 small text-white-50">
+          <i class="fa-solid fa-gift me-1"></i> Free samples for wholesale enquiries • 
+          <i class="fa-solid fa-globe me-1"></i> Ships worldwide
+        </p>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block">
+        <div class="position-relative">
+          <img src="https://img.freepik.com/premium-photo/indian-cuisine-meals-served-banana-leaf-traditional-south-indian-cuisine_875825-50086.jpg?w=2000" 
+               alt="Eco-friendly leaf plates with food" 
+               class="img-fluid rounded-3 shadow-lg">
+          <div class="position-absolute top-0 end-0 bg-success text-white px-3 py-2 rounded-3 m-3">
+            <small><strong>100% Natural</strong></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- UN SDGs SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">Our Contribution to UN Sustainable Development Goals</h2>
+    <div class="row g-4">
+      <!-- SDG 9 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 border-0 shadow-sm sdg-card">
+          <div class="card-body">
+            <div class="text-center mb-3">
+              <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-09.jpg" alt="SDG 9" class="sdg-icon" style="width: 100px;">
+            </div>
+            <h5 class="card-title text-center mb-3">Industry, Innovation and Infrastructure</h5>
+            <p class="card-text">MSME-led green manufacturing advances leaf-stitching innovation, improves quality and scales rural production infrastructure.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SDG 8 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="text-center mb-3">
+              <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-08.jpg" alt="SDG 8" style="width: 100px;">
+            </div>
+            <h5 class="card-title text-center mb-3">Decent Work and Economic Growth</h5>
+            <p class="card-text">Compostable and Biodegradable leaf tableware creates dignified rural livelihoods, empowering women and tribal communities with stable incomes.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SDG 12 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="text-center mb-3">
+              <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg" alt="SDG 12" style="width: 100px;">
+            </div>
+            <h5 class="card-title text-center mb-3">Responsible Consumption and Production</h5>
+            <p class="card-text">Plastic-free leaf plates and bowls enable responsible consumption, reduce waste, and promote circularity.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SDG 13 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="text-center mb-3">
+              <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-13.jpg" alt="SDG 13" style="width: 100px;">
+            </div>
+            <h5 class="card-title text-center mb-3">Climate Action</h5>
+            <p class="card-text">Natural leafware lowers carbon footprints, avoids Petro-plastics, supports composting, biodegradable and encourages climate-conscious dining choices.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SDG 15 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="text-center mb-3">
+              <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-15.jpg" alt="SDG 15" style="width: 100px;">
+            </div>
+            <h5 class="card-title text-center mb-3">Life on Land</h5>
+            <p class="card-text">Ethical sourcing of Butea monosperma and Bauhinia Vahlii protects biodiversity, forests, and community ecosystems resilience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="sustainability.html" class="btn btn-brand btn-lg">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SNAPSHOT -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h2 class="section-title">About Vistarleaf</h2>
+        <p>Vistarleaf is more than a product — it’s a movement to restore balance between <strong>nature, people, and industry</strong>. We transform leaves into eco-sustainable dining tableware while empowering rural & tribal communities in Telangana, India.</p>
+        <blockquote class="blockquote">“Vistarleaf is not just a business, it’s a mission to replace plastic with nature.” <br>— <strong>Sree Teja Deeti</strong>, Founder</blockquote>
+        <a href="about.html" class="btn btn-brand mt-3">Learn More</a>
+      </div>
+      <div class="col-lg-6"> <iframe width="697" height="391" src="https://www.youtube.com/embed/41pu64u1iCM" title="Leaf Plates &amp; Bowls | Vistar Leaf - Eco Sustainable Products | Khammam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WHY CHOOSE US -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="section-title">Why Choose Vistarleaf?</h2>
+    <div class="row g-4">
+      <div class="col-md-3"><i class="fa-solid fa-leaf feature-icon"></i><p>100% Natural Leaf</p></div>
+      <div class="col-md-3"><i class="fa-solid fa-seedling feature-icon"></i><p>Boosts Digestion</p></div>
+      <div class="col-md-3"><i class="fa-solid fa-recycle feature-icon"></i><p>Eco-Friendly Disposal</p></div>
+      <div class="col-md-3"><i class="fa-solid fa-bowl-food feature-icon"></i><p>Safe for Hot & Cold Foods</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="section-title">Product Highlights</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <img src="products\1.25BFP.JPG" class="img-fluid rounded" alt="12.5 inch eco-friendly buffet plate">
+        <h6 class="mt-2">12.5" Buffet Plate</h6>
+        <p class="small text-muted">Made from naturally fallen palm leaves</p>
+      </div>
+      <div class="col-md-3">
+        <img src="products\4.5compostable_bowl.JPG" class="img-fluid rounded" alt="4.5 inch compostable bowl">
+        <h6 class="mt-2">4.5" Compostable Bowl</h6>
+        <p class="small text-muted">100% biodegradable and leak-proof</p>
+      </div>
+      <div class="col-md-3">
+        <img src="products\9Sittingplate.JPG" class="img-fluid rounded" alt="9 inch sitting plate">
+        <h6 class="mt-2">9" Sitting Plate</h6>
+        <p class="small text-muted">Sustainable dining solution</p>
+      </div>
+      <div class="col-md-3">
+        <img src="products\idlybowl.JPG" class="img-fluid rounded" alt="Idly bowls eco-friendly">
+        <h6 class="mt-2">Idly Bowls</h6>
+        <p class="small text-muted">Perfect for traditional Indian meals</p>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <h5 class="text-success mb-3">Why Choose Our Leaf Products?</h5>
+        <div class="row text-start">
+          <div class="col-md-4">
+            <h6>🌿 100% Natural</h6>
+            <p class="small">Made from naturally fallen palm leaves without cutting trees</p>
+          </div>
+          <div class="col-md-4">
+            <h6>♻️ Compostable</h6>
+            <p class="small">Biodegradable plates that break down in 2-6 months</p>
+          </div>
+          <div class="col-md-4">
+            <h6>🔥 Heat Resistant</h6>
+            <p class="small">Microwave safe and suitable for hot foods</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="shop.html" class="btn btn-success mt-4 px-4">Explore All Products</a>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title">Our Impact</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="impact-card"><h3>1,000+ kg</h3><p>Plastic waste prevented</p></div></div>
+      <div class="col-md-4"><div class="impact-card"><h3>500+</h3><p>Rural families supported</p></div></div>
+      <div class="col-md-4"><div class="impact-card"><h3>100%</h3><p>Compostable packaging</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Awards & Certifications</h2>
+    <p class="mb-5" data-aos="fade-up">Recognized globally for innovation in sustainable alternatives.</p>
+    <div class="row justify-content-center align-items-center g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="award-card p-4 h-100">
+          <img src="https://navzansolutions.com/wp-content/uploads/2024/01/zed-golden-certificate-sample.webp" 
+               class="award-logo img-fluid" 
+               alt="ZED Gold Certification"
+               style="max-height: 150px; width: auto;">
+          <h5 class="mt-3 mb-2">ZED Gold Certification</h5>
+          <p class="small text-muted">Zero Defect Zero Effect Certification</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="award-card p-4 h-100">
+          <img src="https://nextbusinessmedia.com/wp-content/uploads/2024/12/NBM-Blog-21.jpg" 
+               class="award-logo img-fluid" 
+               alt="Business Excellence Award"
+               style="max-height: 150px; width: auto;">
+          <h5 class="mt-3 mb-2">Business Excellence Award</h5>
+          <p class="small text-muted">Recognition for Sustainable Business Practices</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="award-card p-4 h-100">
+          <img src="https://thvnext.bing.com/th/id/OIP.cCyDoS_u6GUMhvVw8QKpRQHaFu?w=276&h=213&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" 
+               class="award-logo img-fluid" 
+               alt="Environmental Excellence Certificate"
+               style="max-height: 150px; width: auto;">
+          <h5 class="mt-3 mb-2">Environmental Excellence</h5>
+          <p class="small text-muted">Certified for Eco-friendly Manufacturing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">What People Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <p class="testimonial">“Strong, durable, and eco-friendly! Perfect for our restaurant.”</p>
+          <small>- Restaurant Owner</small>
+        </div>
+        <div class="carousel-item">
+          <p class="testimonial">“Our guests loved the natural touch at our wedding feast!”</p>
+          <small>- Wedding Caterer</small>
+        </div>
+        <div class="carousel-item">
+          <p class="testimonial">“Finally, a sustainable solution that actually works!”</p>
+          <small>- Eco Activist</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="section-title">Join Our Movement</h2>
+    <p>Sign up for updates, events & sustainability tips.</p>
+    <form class="row justify-content-center">
+      <div class="col-md-6 d-flex">
+        <input type="email" class="form-control me-2" placeholder="Enter your email">
+        <button class="btn btn-brand">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Partner Modal -->
+<div class="modal fade" id="partnerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title">Partner With Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3"><input type="text" class="form-control" placeholder="Name" required></div>
+          <div class="mb-3"><input type="email" class="form-control" placeholder="Email" required></div>
+          <div class="mb-3"><textarea class="form-control" rows="3" placeholder="Your Business Requirements"></textarea></div>
+          <button type="submit" class="btn btn-brand w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:#1c1c1c; color:#bbb; padding:50px 20px; margin-top:40px; font-family:Arial, sans-serif;">
+  <div style="max-width:1200px; margin:auto;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+      
+      <!-- Company Info -->
+      <div style="flex:1 1 250px; min-width:250px;">
+        <h5 style="color:#fff; margin-bottom:15px; font-size:20px;">Vistarleaf</h5>
+        <p style="line-height:1.6; margin:0;">Eco Sustainable Dining Tableware made from natural leaves.<br>
+        <span style="color:#fff;">Proudly Made in India.</span></p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div style="flex:1 1 150px; min-width:150px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Quick Links</h6>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="about.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">About Us</a></li>
+          <li><a href="business.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Business</a></li>
+          <li><a href="sustainability.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Sustainability</a></li>
+          <li><a href="faq.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">FAQ</a></li>
+          <li><a href="gallery.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Gallery</a></li>
+          <li><a href="blog.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Blog</a></li>
+          <li><a href="legal.html#privacy" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Legal</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div style="flex:1 1 200px; min-width:200px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Contact</h6>
+        <p style="margin:5px 0;">📧 <a href="mailto:support@vistarleaf.com" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">support@vistarleaf.com</a></p>
+        <p style="margin:5px 0;">📞 +91 90 327 500 17</p>
+        <p style="margin:5px 0;">📍 Khammam, Telangana, India</p>
+      </div>
+      
+      <!-- Social -->
+      <div style="flex:1 1 200px; min-width:200px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Follow Us</h6>
+        <div style="display:flex; gap:15px; font-size:20px;">
+          <a href="https://instagram.com/vistarleaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#bbb'"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='#bbb'"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/company/vistar-leaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='#bbb'"><i class="bi bi-linkedin"></i></a>
+          <a href="https://youtube.com/@vistarleaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#bbb'"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <hr style="border:none; border-top:1px solid #444; margin:30px 0;">
+    <p style="text-align:center; margin:0; color:#888;">&copy; 2025 <span style="color:#fff;">Vistarleaf</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 100
+  });
+
+  // Add smooth scrolling to all links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Navbar background on scroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.style.backgroundColor = '#ffffff';
+      navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    } else {
+      navbar.style.backgroundColor = '#ffffff';
+      navbar.style.boxShadow = '0 2px 6px rgba(0,0,0,0.05)';
+    }
+  });
+</script>
+</body>
+</html>

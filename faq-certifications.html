@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ & Certifications - Vistarleaf</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --brand-green: #999900;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: var(--brand-green) !important;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1542826438-bd32f44b6f83?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      padding: 140px 0;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    @keyframes fadeInDown {
+      from {opacity:0; transform: translateY(-30px);}
+      to {opacity:1; transform: translateY(0);}
+    }
+    .section-title {
+      color: var(--brand-green);
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    /* FAQ */
+    .accordion-button {
+      font-weight: 500;
+    }
+    .accordion-item {
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .accordion-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+    /* Certifications */
+    .cert-card {
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      background: #fff;
+      transition: all 0.3s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+    }
+    .cert-card i {
+      font-size: 3rem;
+      color: var(--brand-green);
+      margin-bottom: 12px;
+      transition: 0.3s;
+    }
+    .cert-card:hover i {
+      transform: scale(1.2);
+    }
+    .cert-logo {
+      max-width: 120px;
+      margin: 15px auto;
+      display: block;
+    }
+    /* CTA */
+    .cta-strip {
+      background: url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .cta-strip::after {
+      content:"";
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      background: rgba(0,0,0,0.6);
+    }
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+    .cta-strip h3 { font-weight: bold; }
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 40px 0;
+    }
+    footer a { color: #bbb; text-decoration: none; }
+    footer a:hover { color: white; }
+    /* FAQ Search */
+    #faqSearch {
+      margin-bottom: 25px;
+      border: 2px solid var(--brand-green);
+      border-radius: 8px;
+      padding: 10px 15px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top" style="background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="VL_Logo_No_BG.png" alt="Vistarleaf Logo" style="height:49px; vertical-align:middle;">
+<span style="color:#999900; font-weight:bold; font-size:20px; vertical-align:middle; margin-left:8px;">
+  Vistarleaf
+</span>
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery-media.html">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero text-center text-white">
+  <div class="container hero-content">
+    <h1 class="display-4 fw-bold">FAQs & Certifications</h1>
+    <p class="lead">Your questions answered & our eco-trust verified</p>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<div class="container my-5" data-aos="fade-up">
+  <h2 class="section-title text-center">Frequently Asked Questions</h2>
+  <input type="text" id="faqSearch" class="form-control" placeholder="🔍 Search FAQs...">
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+          Are Vistarleaf products safe for hot food?
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          ✅ Yes, all our plates and bowls are heat-resistant and safe for serving hot food and liquids.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+          How long does it take for the plates to decompose?
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          🌱 Vistarleaf products decompose naturally within 60 days when disposed in compost or soil.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+          Do you ship globally?
+        </button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          🌍 Yes, we ship across India and internationally to UAE, USA, Australia, and Europe.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+          Are chemicals or colors used in manufacturing?
+        </button>
+      </h2>
+      <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          ❌ No, our products are 100% natural and chemical-free, retaining the natural color of the leaves.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS SECTION -->
+<div class="container my-5" data-aos="fade-up">
+  <h2 class="section-title text-center">Our Certifications</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="cert-card">
+        <i class="bi bi-patch-check-fill"></i>
+        <h5>ZED Certification</h5>
+        <img src="https://dummyimage.com/120x120/ccc/000.png&text=ZED" alt="ZED Logo" class="cert-logo">
+        <p>Government of India certified Zero Defect, Zero Effect manufacturing.</p>
+        <a href="#" class="btn btn-outline-success btn-sm">Download</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="cert-card">
+        <i class="bi bi-award-fill"></i>
+        <h5>PolyNext Award</h5>
+        <img src="https://dummyimage.com/120x120/ccc/000.png&text=Award" alt="Award Logo" class="cert-logo">
+        <p>Excellence in Plastic Alternatives, PolyNext Conference, Dubai.</p>
+        <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="cert-card">
+        <i class="bi bi-file-earmark-text-fill"></i>
+        <h5>Lab Test Reports</h5>
+        <img src="https://dummyimage.com/120x120/ccc/000.png&text=Lab" alt="Lab Logo" class="cert-logo">
+        <p>Certified biodegradable, compostable, and food-safe materials.</p>
+        <a href="#" class="btn btn-outline-success btn-sm">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div class="cta-content">
+    <h3>Still Have Questions?</h3>
+    <a href="contact.html" class="btn btn-light mt-3 px-4">Contact Us</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:#1c1c1c; color:#bbb; padding:50px 20px; margin-top:40px; font-family:Arial, sans-serif;">
+  <div style="max-width:1200px; margin:auto;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+      
+      <!-- Company Info -->
+      <div style="flex:1 1 250px; min-width:250px;">
+        <h5 style="color:#fff; margin-bottom:15px; font-size:20px;">Vistarleaf</h5>
+        <p style="line-height:1.6; margin:0;">Eco Sustainable Dining Tableware made from natural leaves.<br>
+        <span style="color:#fff;">Proudly Made in India.</span></p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div style="flex:1 1 150px; min-width:150px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Quick Links</h6>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="about.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">About Us</a></li>
+          <li><a href="business.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Business</a></li>
+          <li><a href="sustainability.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Sustainability</a></li>
+          <li><a href="faq.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">FAQ</a></li>
+          <li><a href="gallery.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Gallery</a></li>
+          <li><a href="blog.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Blog</a></li>
+          <li><a href="legal.html#privacy" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Legal</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div style="flex:1 1 200px; min-width:200px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Contact</h6>
+        <p style="margin:5px 0;">📧 <a href="mailto:support@vistarleaf.com" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">support@vistarleaf.com</a></p>
+        <p style="margin:5px 0;">📞 +91 90 327 500 17</p>
+        <p style="margin:5px 0;">📍 Khammam, Telangana, India</p>
+      </div>
+      
+      <!-- Social -->
+      <div style="flex:1 1 200px; min-width:200px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Follow Us</h6>
+        <div style="display:flex; gap:15px; font-size:20px;">
+          <a href="https://instagram.com/vistarleaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#bbb'"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='#bbb'"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/company/vistar-leaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='#bbb'"><i class="bi bi-linkedin"></i></a>
+          <a href="https://youtube.com/@vistarleaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#bbb'"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <hr style="border:none; border-top:1px solid #444; margin:30px 0;">
+    <p style="text-align:center; margin:0; color:#888;">&copy; 2025 <span style="color:#fff;">Vistarleaf</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // FAQ Search filter
+  document.getElementById('faqSearch').addEventListener('keyup', function() {
+    let filter = this.value.toLowerCase();
+    let faqs = document.querySelectorAll('.accordion-item');
+    faqs.forEach(faq => {
+      let text = faq.innerText.toLowerCase();
+      faq.style.display = text.includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Policies - Vistarleaf</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    :root { --brand-green: #999900; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; background: #fdfdfd; }
+    .navbar { background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .navbar-brand { font-weight: bold; color: var(--brand-green) !important; }
+    .hero {
+      background: url('https://source.unsplash.com/1600x500/?law,documents') center/cover no-repeat;
+      color: white; padding: 100px 0; position: relative;
+    }
+    .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.55); }
+    .hero-content { position:relative; z-index:2; }
+    .section { display: none; }
+    .active-section { display: block; animation: fadeIn 0.5s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .legal-card {
+      background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 40px; margin: 40px auto; max-width: 900px;
+    }
+    .section-title { color: var(--brand-green); font-weight: bold; margin-bottom: 20px; }
+    footer { background: #222; color: #bbb; padding: 40px 0; margin-top: 50px; }
+    footer a { color: #bbb; text-decoration: none; }
+    footer a:hover { color: white; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top" style="background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="VL_Logo_No_BG.png" alt="Vistarleaf Logo" style="height:49px; vertical-align:middle;">
+<span style="color:#999900; font-weight:bold; font-size:20px; vertical-align:middle; margin-left:8px;">
+  Vistarleaf
+</span>
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery-media.html">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero text-center text-white">
+  <div class="container hero-content">
+    <h1 id="page-title" class="fw-bold">Legal Policies</h1>
+    <p id="page-subtitle" class="lead">Transparency and trust for all our users and partners</p>
+  </div>
+</section>
+
+<!-- LEGAL SECTIONS -->
+<div class="container">
+  <!-- Privacy -->
+  <div id="privacy" class="section">
+    <div class="legal-card">
+      <h2 class="section-title"><i class="bi bi-shield-lock"></i> Privacy Policy</h2>
+      <p>We respect your privacy and are committed to protecting your personal data. This explains what we collect and how we use it.</p>
+      <ul>
+        <li>Information we collect (name, email, phone, address).</li>
+        <li>How we use data (orders, customer support, improvements).</li>
+        <li>We never sell your data.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Terms -->
+  <div id="terms" class="section">
+    <div class="legal-card">
+      <h2 class="section-title"><i class="bi bi-file-text"></i> Terms of Service</h2>
+      <p>By using our services, you agree to the following:</p>
+      <ul>
+        <li>Respectful and lawful use of services.</li>
+        <li>Prices may change without prior notice.</li>
+        <li>Orders subject to availability and confirmation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Shipping -->
+  <div id="shipping" class="section">
+    <div class="legal-card">
+      <h2 class="section-title"><i class="bi bi-truck"></i> Shipping & Returns</h2>
+      <p>We ship worldwide and want you to be happy with your purchase.</p>
+      <ul>
+        <li>Processing time: 2–4 business days.</li>
+        <li>Delivery varies by country.</li>
+        <li>Returns accepted for damaged items within 7 days.</li>
+        <li>Used eco-products cannot be returned.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Cookie -->
+  <div id="cookie" class="section">
+    <div class="legal-card">
+      <h2 class="section-title"><i class="bi bi-cookie"></i> Cookie Policy</h2>
+      <p>We use cookies to improve your browsing experience.</p>
+      <ul>
+        <li>Cookies track performance and remember preferences.</li>
+        <li>You can disable cookies in your browser settings.</li>
+        <li>Some site features may not work without cookies.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:#1c1c1c; color:#bbb; padding:50px 20px; margin-top:40px; font-family:Arial, sans-serif;">
+  <div style="max-width:1200px; margin:auto;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+      
+      <!-- Company Info -->
+      <div style="flex:1 1 250px; min-width:250px;">
+        <h5 style="color:#fff; margin-bottom:15px; font-size:20px;">Vistarleaf</h5>
+        <p style="line-height:1.6; margin:0;">Eco Sustainable Dining Tableware made from natural leaves.<br>
+        <span style="color:#fff;">Proudly Made in India.</span></p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div style="flex:1 1 150px; min-width:150px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Quick Links</h6>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="about.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">About Us</a></li>
+          <li><a href="business.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Business</a></li>
+          <li><a href="sustainability.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Sustainability</a></li>
+          <li><a href="faq.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">FAQ</a></li>
+          <li><a href="gallery.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Gallery</a></li>
+          <li><a href="blog.html" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Blog</a></li>
+          <li><a href="legal.html#privacy" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">Legal</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div style="flex:1 1 200px; min-width:200px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Contact</h6>
+        <p style="margin:5px 0;">📧 <a href="mailto:support@vistarleaf.com" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bbb'">support@vistarleaf.com</a></p>
+        <p style="margin:5px 0;">📞 +91 90 327 500 17</p>
+        <p style="margin:5px 0;">📍 Khammam, Telangana, India</p>
+      </div>
+      
+      <!-- Social -->
+      <div style="flex:1 1 200px; min-width:200px;">
+        <h6 style="color:#fff; margin-bottom:15px; font-size:16px;">Follow Us</h6>
+        <div style="display:flex; gap:15px; font-size:20px;">
+          <a href="https://instagram.com/vistarleaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#bbb'"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='#bbb'"><i class="bi bi-facebook"></i></a>
+          <a href="https://linkedin.com/company/vistar-leaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='#bbb'"><i class="bi bi-linkedin"></i></a>
+          <a href="https://youtube.com/@vistarleaf" style="color:#bbb; text-decoration:none;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#bbb'"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <hr style="border:none; border-top:1px solid #444; margin:30px 0;">
+    <p style="text-align:center; margin:0; color:#888;">&copy; 2025 <span style="color:#fff;">Vistarleaf</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Show only the section based on hash
+  function showSection() {
+    let hash = window.location.hash || "#privacy"; // default page
+    document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active-section"));
+    let section = document.querySelector(hash);
+    if (section) {
+      section.classList.add("active-section");
+      // Change hero text dynamically
+      document.getElementById("page-title").textContent = section.querySelector("h2").textContent;
+      document.getElementById("page-subtitle").textContent = "Learn about our " + section.querySelector("h2").textContent.toLowerCase();
+    }
+  }
+  window.addEventListener("load", showSection);
+  window.addEventListener("hashchange", showSection);
+</script>
+</body>
+</html>
